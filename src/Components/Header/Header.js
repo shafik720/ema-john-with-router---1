@@ -9,11 +9,11 @@ const Header = () => {
                 <img src={logo} alt=""/>
             </div>
             <div className="right-div">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Menu</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Shop</a>
+                <a href="/home">Home</a>
+                <a href="/about">About</a>
+                <a href="/menu">Menu</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/shop">Shop</a>
             </div>
         </div>
     );
