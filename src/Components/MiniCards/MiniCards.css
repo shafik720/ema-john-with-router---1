@@ -22,3 +22,9 @@
     display: flex;
     gap: 20px;
 }
+
+.mini-card-right span{
+    color: rgb(206, 16, 16);
+    font-size: 25px;
+    cursor: pointer;
+}
