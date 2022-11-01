@@ -4,8 +4,11 @@ import './MiniCards.css'
 const MiniCards = (props) => {
     let {name, price, img, ratings, seller, shipping} = props.index;
     return (
-        <div>
-            <h2>{name}</h2>
+        <div className="mini-card-div">
+            <div className="mini-card-left">
+                <img src={img} alt=""/>
+            </div>
+            <div className="mini-card-right"></div>
         </div>
     );
 };
