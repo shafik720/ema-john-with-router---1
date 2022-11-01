@@ -11,7 +11,9 @@ const Orders = () => {
     return (
         <div className="body-div">
             <div className="left-orders">
-            <h2>Order Page :  </h2>
+                <div className="mini-cards">
+                    
+                </div>
             </div>
             <div className="body-right">
                 <Cart cart={cart}></Cart>
