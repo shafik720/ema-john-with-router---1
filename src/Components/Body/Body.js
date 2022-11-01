@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useProducts from '../../hooks/useProducts';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
@@ -6,13 +7,14 @@ import './Body.css'
 
 const Body = () => {
 
-    const [products, setProducts] = useState([]);
-    useEffect(()=>{
-        fetch('products.json')
-        .then(res=>res.json())
-        .then(data=>setProducts(data))
-    },[]);
+    // const [products, setProducts] = useState([]);
+    // useEffect(()=>{
+    //     fetch('products.json')
+    //     .then(res=>res.json())
+    //     .then(data=>setProducts(data))
+    // },[]);
 
+    let [products, setProducts] = useProducts();
     
 
     let [cart, setCart] = useState([]);
