@@ -4,7 +4,7 @@ import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import Cart from '../Cart/Cart';
 import MiniCards from '../MiniCards/MiniCards';
-import { removeFromDb } from '../../utilities/fakedb';
+import { getStoredCart, removeFromDb } from '../../utilities/fakedb';
 
 const Orders = () => {
     let [products, setProducts] = useProducts();
@@ -12,8 +12,20 @@ const Orders = () => {
     let [cart, setCart] = useCart(products);
 
     function deleteOrders(element){        
-        // removeFromDb(element.id); 
+        removeFromDb(element.id); 
         console.log(cart);
+        
+        // ----------------------
+        const  storedCart = getStoredCart();
+        let freshCart = [];
+        for(let productId in storedCart){
+            let addedProduct = products.find(product=> product.id === productId);
+            
+            if(addedProduct){                
+                freshCart.push(addedProduct);
+            }
+        }        
+    setCart(freshCart);
     }
     
     return (
