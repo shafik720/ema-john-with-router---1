@@ -12,8 +12,6 @@ const Orders = () => {
         <div className="body-div">
             <div className="left-orders">
             <h2>Order Page :  </h2>
-            <h3>Total Products : {products.length} </h3>
-            <h3>Total Added Products : {cart.length} </h3>
             </div>
             <div className="body-right">
                 <Cart cart={cart}></Cart>
