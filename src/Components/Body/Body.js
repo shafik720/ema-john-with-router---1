@@ -41,8 +41,7 @@ const Body = () => {
                 addedProduct.quantity = quantity;
                 freshCart.push(addedProduct);
             }
-        }
-        
+        }        
     setCart(freshCart);
     },[products])
     
