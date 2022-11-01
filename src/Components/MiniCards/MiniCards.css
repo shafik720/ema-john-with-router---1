@@ -34,4 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.1s;
+}
+
+.mini-card-right span:hover{
+    background: darkblue;
+    color: white;
 }
