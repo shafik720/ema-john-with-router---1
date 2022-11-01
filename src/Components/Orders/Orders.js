@@ -10,6 +10,7 @@ const Orders = () => {
         <div>
             <h2>Order Page :  </h2>
             <h3>Total Products : {products.length} </h3>
+            <h3>Total Added Products : {cart.length} </h3>
         </div>
     );
 };
