@@ -1,7 +1,7 @@
 import React from 'react';
 import './Products.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 
 const Products = (props) => {    
     let {name, price, img, ratings, seller, shipping} = props.index;

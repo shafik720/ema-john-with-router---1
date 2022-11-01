@@ -1,5 +1,7 @@
 import React from 'react';
-import './MiniCards.css'
+import './MiniCards.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 const MiniCards = (props) => {
     let {name, price, img, ratings, seller, shipping, quantity} = props.index;
@@ -12,7 +14,9 @@ const MiniCards = (props) => {
                     <p>Quantity : {quantity} </p>
                 </div>
             </div>
-            <div className="mini-card-right"></div>
+            <div className="mini-card-right">
+                <span><FontAwesomeIcon icon={faTrashCan} /></span>
+            </div>
         </div>
     );
 };
