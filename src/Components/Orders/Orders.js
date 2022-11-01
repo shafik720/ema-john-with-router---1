@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import Cart from '../Cart/Cart';
+import MiniCards from '../MiniCards/MiniCards';
 
 const Orders = () => {
     let [products, setProducts] = useProducts();
@@ -11,9 +12,11 @@ const Orders = () => {
     return (
         <div className="body-div">
             <div className="left-orders">
-                <div className="mini-cards">
-                    
-                </div>
+                {
+                    cart.map(index=><MiniCards
+                        index = {index}
+                    ></MiniCards>)
+                }
             </div>
             <div className="body-right">
                 <Cart cart={cart}></Cart>
